@@ -17,11 +17,11 @@ while (sortie == false)
 	{
 	System.in.read();
 	des = (float)Math.random();
-	des = 55 * des;
+	des = 56 * des;
 	int r = (int)des;
 	String l;
 	String chopes[] = {"Rochefort 6","Rochefort 8","Rochefort 10","St Bernardus","Achel Blonde",
-			"Achel Brune","Westmalle Double","Westmalle Triple","Orval","Chimay Rouge","Chimay Triple",
+			"Achel Brune","Westmalle Double","Westmalle Triple","Orval","Zundert","Chimay Rouge","Chimay Triple",
 			"Chimay Bleue","Duvel","Duvel Triple Hop","Kasteel Rouge","Super des Fagnes Blonde",
 			"Super des Fagnes Brune","Malmedy Blonde","Malmedy Brune","Trappe Blanche","Trappe Pure",
 			"Trappe Blonde","Trappe Double","Trappe Isidor","Trappe Triple","Trappe Quadruple",
@@ -32,40 +32,40 @@ while (sortie == false)
 			"Chouffe Cherry","Chouffe au fût","Scotch au fût","Leffe brune","Leffe Blonde","Leffe Rubis",
 			"Hoegaarden"
 					};
-	if (r <= 8)
+	if (r <= 9)
 		{
 		System.out.println("Le premier dé tombe sur le frigo 1. (Que du bon !!");
-		for(int stop = 0; stop < 9; stop++)
+		for(int stop = 0; stop < 10; stop++)
 			System.out.println(chopes[stop]);
 		}
-	else if (r >= 9 && r <= 18)
+	else if (r >= 10 && r <= 19)
 		{
 		System.out.println("Le premier dé tombe sur le Frigo 2. (Tu es dans la merde !");
-		for(int stop = 9; stop < 19; stop++)
+		for(int stop = 10; stop < 20; stop++)
 			System.out.println(chopes[stop]);
 		}
-	else if (r >= 19 && r <= 31)
+	else if (r >= 20 && r <= 32)
 		{
 		System.out.println("Le premier dé est tombé sur le frigo 3. (Que des valeurs sûres !)");
-		for(int stop = 19; stop < 31; stop++)
+		for(int stop = 20; stop < 33; stop++)
 			System.out.println(chopes[stop]);
 		}
-	else if (r >= 32 && r <= 40)
+	else if (r >= 33 && r <= 41)
 	{
 		System.out.println("Le premier dé est tombé sur le frigo 4. (Toutes pas mal, sauf la dernière...");
-		for(int stop = 32; stop < 41; stop++)
+		for(int stop = 33; stop < 42; stop++)
 			System.out.println(chopes[stop]);
 	}
-	else if (r >= 41 && r <= 48)
+	else if (r >= 42 && r <= 50)
 		{
 		System.out.println("Le premier dé est tombé sur le frigo 5. (Aucun soucis à te faire, que du bon !)");
-		for(int stop = 41; stop < 49; stop++)
+		for(int stop = 42; stop < 51; stop++)
 			System.out.println(chopes[stop]);
 		}
-	else if (r >= 48 && r <= 54)
+	else if (r >= 51 && r <= 56)
 		{
 		System.out.println("Le premier dé est tombé sur la catégorie des bières au fût !");
-		for(int stop = 49; stop < 55; stop++)
+		for(int stop = 51; stop < 57; stop++)
 			System.out.println(chopes[stop]);
 		}
 	System.in.read();
@@ -74,7 +74,7 @@ while (sortie == false)
 	System.in.read();
 	System.out.println("");
 	System.out.print("Tu vas devoir boire ");
-	if(r == 9 || r == 41 || r == 51)
+	if(r == 8 || r == 41 || r == 51)
 		l = "un ";
 	else
 		l = "une ";
@@ -115,6 +115,7 @@ while (sortie == false)
 			System.out.println("Santé !!!");
 			}
 		}
-}
+	
+	}
 }
 }
