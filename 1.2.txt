@@ -5,31 +5,32 @@ public class main {
 public static void main(String[] args) throws IOException
 {
 Scanner sc = new Scanner(System.in);
+boolean sortie = false, fin = false, nombre = false;
 float des;
-char baba;
-// TODO Auto-generated method stub
-do{
+int baba;
 System.out.println("Tu ne sais pas quelle bière boire?");
 System.in.read();
 System.out.println("");
 System.out.println("Laisse les dés choisir pour toi !");
 System.out.println("");
-System.in.read();
-des = (float)Math.random();
-des = 55 * des;
-int r = (int)des;
-String l;
-String chopes[] = {"Rochefort 6","Rochefort 8","Rochefort 10","St Bernardus","Achel Blonde",
-"Achel Brune","Westmalle Double","Westmalle Triple","Orval","Chimay Rouge","Chimay Triple",
-"Chimay Bleue","Duvel","Duvel Triple Hop","Kasteel Rouge","Super des Fagnes Blonde",
-"Super des Fagnes Brune","Malmedy Blonde","Malmedy Brune","Trappe Blanche","Trappe Pure",
-"Trappe Blonde","Trappe Double","Trappe Isidor","Trappe Triple","Trappe Quadruple",
-"Triple d'Anvers","Lupulus Organicus","Lupulus Blanche","Lupulus Opera","Lupulus Triple","Lupulus Fructus",
-"Bellevaux TPA","Bellevaux Blanche","Bellevaux Brune","Bellevaux Triple","Bellevaux Black",
-"Kwak","Triple Karmeliet","Goose IPA","Scotch Gordon","Val Dieu Triple","Val Dieu Blonde",
-"Val Dieu Brune","Mc Chouffe","Chouffe Blanche","Chouffe Houblon","N'ice Chouffe",
-"Chouffe Cherry","Chouffe au fût","Scotch au fût","Leffe brune","Leffe Blonde","Leffe Rubis",
-"Hoegaarden"
+while (sortie == false)
+	{
+	System.in.read();
+	des = (float)Math.random();
+	des = 55 * des;
+	int r = (int)des;
+	String l;
+	String chopes[] = {"Rochefort 6","Rochefort 8","Rochefort 10","St Bernardus","Achel Blonde",
+			"Achel Brune","Westmalle Double","Westmalle Triple","Orval","Chimay Rouge","Chimay Triple",
+			"Chimay Bleue","Duvel","Duvel Triple Hop","Kasteel Rouge","Super des Fagnes Blonde",
+			"Super des Fagnes Brune","Malmedy Blonde","Malmedy Brune","Trappe Blanche","Trappe Pure",
+			"Trappe Blonde","Trappe Double","Trappe Isidor","Trappe Triple","Trappe Quadruple",
+			"Triple d'Anvers","Lupulus Organicus","Lupulus Blanche","Lupulus Opera","Lupulus Triple","Lupulus Fructus",
+			"Bellevaux TPA","Bellevaux Blanche","Bellevaux Brune","Bellevaux Triple","Bellevaux Black",
+			"Kwak","Triple Karmeliet","Goose IPA","Scotch Gordon","Val Dieu Triple","Val Dieu Blonde",
+			"Val Dieu Brune","Mc Chouffe","Chouffe Blanche","Chouffe Houblon","N'ice Chouffe",
+			"Chouffe Cherry","Chouffe au fût","Scotch au fût","Leffe brune","Leffe Blonde","Leffe Rubis",
+			"Hoegaarden"
 };
 if (r <= 8)
 {
@@ -77,11 +78,43 @@ if(r == 9 || r == 41 || r == 51)
 l = "un ";
 else
 l = "une ";
+if (nombre == true)
+l = "deux ";
 System.out.print(l);
 System.out.println(chopes[r]);
+if (nombre == true)
+	{
+	System.out.println("Santé !!!");
+	sortie = true;
+	}
 System.in.read();
-System.out.println("Voulez-vous recommencer ? O/N");
-baba = sc.nextLine().charAt(0);
-}while (baba == 'O');
+if (fin == false)
+{
+System.out.println("Veux-tu tenter le quitte ou double ?");
+System.out.println("1 : oui / 2 : non");
+Scanner sv = new Scanner(System.in);
+int qod = sv.nextInt();
+while ((qod != 1) && (qod != 2))
+	{
+	System.out.println("Choix incorrect, apprends à lire");
+	System.out.println("Veux-tu tenter le quitte ou double ?");
+	System.out.println("1 : oui / 2 : non");
+	qod = sc.nextInt();
+	}
+	
+if (qod == 1)
+	{
+	System.out.println("Tu es joueur, j'adore ça");
+	System.out.println("Je me mare si tu tombes sur le Gordon...");
+	nombre = true;
+	fin = true;
+	}
+	else
+	{
+	sortie = true;
+	System.out.println("Santé !!!");
+	}
+}
+}
 }
 }
