@@ -56,16 +56,16 @@ while (sortie == false)
 		for(int stop = 33; stop < 42; stop++)
 			System.out.println(chopes[stop]);
 	}
-	else if (r >= 42 && r <= 50)
+	else if (r >= 42 && r <= 49)
 		{
 		System.out.println("Le premier dé est tombé sur le frigo 5. (Aucun soucis à te faire, que du bon !)");
-		for(int stop = 42; stop < 51; stop++)
+		for(int stop = 42; stop < 50; stop++)
 			System.out.println(chopes[stop]);
 		}
-	else if (r >= 51 && r <= 56)
+	else if (r >= 50 && r <= 56)
 		{
 		System.out.println("Le premier dé est tombé sur la catégorie des bières au fût !");
-		for(int stop = 51; stop < 57; stop++)
+		for(int stop = 50; stop < 57; stop++)
 			System.out.println(chopes[stop]);
 		}
 	System.in.read();
