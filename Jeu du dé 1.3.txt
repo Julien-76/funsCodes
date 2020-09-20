@@ -31,90 +31,90 @@ while (sortie == false)
 			"Val Dieu Brune","Mc Chouffe","Chouffe Blanche","Chouffe Houblon","N'ice Chouffe",
 			"Chouffe Cherry","Chouffe au fût","Scotch au fût","Leffe brune","Leffe Blonde","Leffe Rubis",
 			"Hoegaarden"
-};
-if (r <= 8)
-{
-System.out.println("Le premier dé tombe sur le frigo 1. (Que du bon !!");
-for(int stop = 0; stop < 9; stop++)
-System.out.println(chopes[stop]);
-}
-else if (r >= 9 && r <= 18)
-{
-System.out.println("Le premier dé tombe sur le Frigo 2. (Tu es dans la merde !");
-for(int stop = 9; stop < 19; stop++)
-System.out.println(chopes[stop]);
-}
-else if (r >= 19 && r <= 31)
-{
-System.out.println("Le premier dé est tombé sur le frigo 3. (Que des valeurs sûres !)");
-for(int stop = 19; stop < 31; stop++)
-System.out.println(chopes[stop]);
-}
-else if (r >= 32 && r <= 40)
-{
-System.out.println("Le premier dé est tombé sur le frigo 4. (Toutes pas mal, sauf la dernière...");
-for(int stop = 32; stop < 41; stop++)
-System.out.println(chopes[stop]);
-}
-else if (r >= 41 && r <= 48)
-{
-System.out.println("Le premier dé est tombé sur le frigo 5. (Aucun soucis à te faire, que du bon !)");
-for(int stop = 41; stop < 49; stop++)
-System.out.println(chopes[stop]);
-}
-else if (r >= 48 && r <= 54)
-{
-System.out.println("Le premier dé est tombé sur la catégorie des bières au fût !");
-for(int stop = 49; stop < 55; stop++)
-System.out.println(chopes[stop]);
-}
-System.in.read();
-System.out.println("");
-System.out.println("Voici le lancé du deuxième dé !");
-System.in.read();
-System.out.println("");
-System.out.print("Tu vas devoir boire ");
-if(r == 9 || r == 41 || r == 51)
-l = "un ";
-else
-l = "une ";
-if (nombre == true)
-l = "deux ";
-System.out.print(l);
-System.out.println(chopes[r]);
-if (nombre == true)
+					};
+	if (r <= 8)
+		{
+		System.out.println("Le premier dé tombe sur le frigo 1. (Que du bon !!");
+		for(int stop = 0; stop < 9; stop++)
+			System.out.println(chopes[stop]);
+		}
+	else if (r >= 9 && r <= 18)
+		{
+		System.out.println("Le premier dé tombe sur le Frigo 2. (Tu es dans la merde !");
+		for(int stop = 9; stop < 19; stop++)
+			System.out.println(chopes[stop]);
+		}
+	else if (r >= 19 && r <= 31)
+		{
+		System.out.println("Le premier dé est tombé sur le frigo 3. (Que des valeurs sûres !)");
+		for(int stop = 19; stop < 31; stop++)
+			System.out.println(chopes[stop]);
+		}
+	else if (r >= 32 && r <= 40)
 	{
-	System.out.println("Santé !!!");
-	sortie = true;
+		System.out.println("Le premier dé est tombé sur le frigo 4. (Toutes pas mal, sauf la dernière...");
+		for(int stop = 32; stop < 41; stop++)
+			System.out.println(chopes[stop]);
 	}
-System.in.read();
-if (fin == false)
-{
-System.out.println("Veux-tu tenter le quitte ou double ?");
-System.out.println("1 : oui / 2 : non");
-Scanner sv = new Scanner(System.in);
-int qod = sv.nextInt();
-while ((qod != 1) && (qod != 2))
-	{
-	System.out.println("Choix incorrect, apprends à lire");
-	System.out.println("Veux-tu tenter le quitte ou double ?");
-	System.out.println("1 : oui / 2 : non");
-	qod = sc.nextInt();
-	}
-	
-if (qod == 1)
-	{
-	System.out.println("Tu es joueur, j'adore ça");
-	System.out.println("Je me mare si tu tombes sur le Gordon...");
-	nombre = true;
-	fin = true;
-	}
+	else if (r >= 41 && r <= 48)
+		{
+		System.out.println("Le premier dé est tombé sur le frigo 5. (Aucun soucis à te faire, que du bon !)");
+		for(int stop = 41; stop < 49; stop++)
+			System.out.println(chopes[stop]);
+		}
+	else if (r >= 48 && r <= 54)
+		{
+		System.out.println("Le premier dé est tombé sur la catégorie des bières au fût !");
+		for(int stop = 49; stop < 55; stop++)
+			System.out.println(chopes[stop]);
+		}
+	System.in.read();
+	System.out.println("");
+	System.out.println("Voici le lancé du deuxième dé !");
+	System.in.read();
+	System.out.println("");
+	System.out.print("Tu vas devoir boire ");
+	if(r == 9 || r == 41 || r == 51)
+		l = "un ";
 	else
-	{
-	sortie = true;
-	System.out.println("Santé !!!");
-	}
-}
+		l = "une ";
+	if (nombre == true)
+		l = "deux ";
+	System.out.print(l);
+	System.out.println(chopes[r]);
+	if (nombre == true)
+		{
+		System.out.println("Santé !!!");
+		sortie = true;
+		}
+	System.in.read();
+	if (fin == false)
+		{	
+		System.out.println("Veux-tu tenter le quitte ou double ?");
+		System.out.println("1 : oui / 2 : non");
+		Scanner sv = new Scanner(System.in);
+		int qod = sv.nextInt();
+		while ((qod != 1) && (qod != 2))
+			{
+			System.out.println("Choix incorrect, apprends à lire");
+			System.out.println("Veux-tu tenter le quitte ou double ?");
+			System.out.println("1 : oui / 2 : non");
+			qod = sc.nextInt();
+			}
+	
+		if (qod == 1)
+			{
+			System.out.println("Tu es joueur, j'adore ça");
+			System.out.println("Je me mare si tu tombes sur le Gordon...");
+			nombre = true;
+			fin = true;
+			}
+		else
+			{
+			sortie = true;
+			System.out.println("Santé !!!");
+			}
+		}
 }
 }
 }
